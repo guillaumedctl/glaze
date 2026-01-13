@@ -60,3 +60,29 @@ git clone [https://github.com/your-username/glaze-core](https://github.com/your-
 cd glaze-core/proxy
 npm install
 npm run deploy
+
+### 2. Configure Your Policy
+Define your security rules in glaze.config.json:
+
+JSON
+
+{
+  "masking": {
+    "emails": "anonymize",
+    "api_keys": "block",
+    "credit_cards": "mask"
+  }
+}
+## 🤝 Join the Movement
+Security shouldn't be a bottleneck for innovation. Glaze is built by builders, for builders.
+
+Star the repo to support the vision.
+
+Open an Issue to suggest a new detection pattern.
+
+Contribute to the open-source core.
+
+## 📄 License
+Distributed under the Apache 2.0 License. See LICENSE for more information.
+
+Built with ❤️ for a secure and sovereign AI future.
