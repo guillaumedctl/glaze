@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Glaze Universal Shield",
+  "version": "1.2",
+  "description": "Enterprise-grade PII protection for AI platforms.",
+  "icons": {
+    "16": "icon.png",
+    "32": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chatgpt.com/*",
+        "https://claude.ai/*",
+        "https://gemini.google.com/*",
+        "https://www.perplexity.ai/*"
+      ],
+      "js": ["content.js"]
+    }
+  ],
+  "permissions": ["storage", "activeTab"],
+  "host_permissions": ["https://proxy.glaze-api.workers.dev/*"]
+}
